@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>UserName</ion-label>
+      <ion-input  type="text" [(ngModel)]="parent.UserName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="Password" [(ngModel)]="parent.Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Email </ion-label>
+      <ion-input  type="text" [(ngModel)]="parent.Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="AddParent()">Submit</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

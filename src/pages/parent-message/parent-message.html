@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ParentMessage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button full (click)="Back()">Back</button>
+    <ion-list >
+      <ion-item text-center  *ngFor ="let msg of DisplayList" > 
+        <h2>From :{{msg.Sender}}</h2>
+        <p>Content : {{msg.Content}}</p>
+      </ion-item>
+    </ion-list>
+</ion-content>

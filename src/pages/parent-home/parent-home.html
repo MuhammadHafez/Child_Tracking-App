@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Hello {{parent.UserName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button full (click)="Logout()">Logout</button>
+    <button ion-button full (click)="SeeMessage()">See My Message</button>
+  <button ion-button full (click)="GotoAddChildPage()">Add Child</button>
+  <ion-list >
+    <ion-item text-center  *ngFor ="let chld of DisplayList" (click)="thisChildClicked(chld)" > 
+      <h2>Name :{{chld.Name}}</h2>
+      <p>Age : {{chld.Age}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Message</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-input [(ngModel)]="Message.Content">message </ion-input>
+<button ion-button full (click)="Send()"> Send </button>
+<button ion-button full (click)="Close()"> Close </button>
+</ion-content>

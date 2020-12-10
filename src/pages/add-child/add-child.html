@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Add Child</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+        <ion-item>
+          <ion-label floating >Name</ion-label>
+          <ion-input type="text" [(ngModel)]="mychild.Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Age</ion-label>
+            <ion-input type="number" [(ngModel)]="mychild.Age"></ion-input>
+        </ion-item>
+        <ion-item>
+              <ion-label floating>School Name</ion-label>
+              <ion-input type="text" [(ngModel)]="mychild.SchoolName"></ion-input>
+        </ion-item >
+        <br>
+        <br>
+
+        <p text-center> Please set this Locations </p>
+        <agm-map [latitude]="Baseline.Latitude"
+        [longitude]="Baseline.Longitude" [zoom]="15" (mapClick)="mapclicked($event)">
+        
+        <agm-marker *ngIf="LocationStatus"
+          [latitude]="MarkerLocation.Latitude"
+          [longitude]="MarkerLocation.Longitude">
+
+          </agm-marker>
+      </agm-map>
+      <ion-row>
+        <ion-col col-6>
+            <button ion-button [disabled]="HomeLocation" (click)="SetHomeLocation()" >Set Home Location</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button [disabled]="SchoolLocation" (click)="SetSchoolLocation()"> Set School Location</button>
+      </ion-col>
+      </ion-row>
+
+          
+        <br>
+
+        <button ion-button block (click)="AddChild()"> Add</button>
+</ion-content>

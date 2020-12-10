@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Register for Childs </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Name</ion-label>
+      <ion-input  type="text" [(ngModel)]="Child.Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Age</ion-label>
+      <ion-input type="number" [(ngModel)]="Child.Age"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>SchoolName</ion-label>
+        <ion-input type="text" [(ngModel)]="Child.SchoolName"></ion-input>
+      </ion-item>
+     
+   
+    <ion-item>
+      <button ion-button full (click)="CheckChild()">Submit</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ChildPersonalPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button icon-left (click)="SendNotes()">
+          <ion-icon name="logo-apple"></ion-icon>
+          Send Notes For Parent
+        </button>
+        <button ion-button icon-left (click)="setCurrentLocation()">
+          <ion-icon name="map"></ion-icon>
+          Current Location
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <agm-map [latitude]="NewLocation.Latitude"
+    [longitude]="NewLocation.Longitude" [zoom]="15" >
+    
+    <agm-marker *ngIf="LocationStatus"
+      [latitude]="NewLocation.Latitude"
+      [longitude]="NewLocation.Longitude">
+
+      </agm-marker>
+  </agm-map>
+
+</ion-content>
